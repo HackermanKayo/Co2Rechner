@@ -1,0 +1,50 @@
+.stage{
+	-fx-background-color: "#4a5a80";
+}
+.scene{
+	-fx-background-color: "#4a5a80";
+}
+
+.label{
+	-fx-font-size: 20;
+	-fx-text-fill: white;
+}
+
+.root{
+	-fx-background-color: "#4a5a80";
+}
+
+#startLabel{
+	-fx-font-size: 35;
+	-fx-text-alignment: center;	
+}
+
+#startButton{	
+	-fx-background-color: white;
+	-fx-cursor: hand;
+}	
+
+#housingLabel{
+	-fx-font-size: 35;
+	-fx-text-alignment: center;
+}
+#stromLabel{
+-fx-font-size: 35;	
+}
+#heizungLabel{
+	-fx-font-size: 35;
+}
+#haustypChoicebox{
+
+}
+
+#baujahrChoicebox{	
+
+}
+
+#mobilityLabel{
+-fx-font-size: 35;	
+}
+#heatingLabel{
+-fx-font-size: 35;	
+}
