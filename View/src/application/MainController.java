@@ -49,7 +49,7 @@ public class MainController {
 	stage.show();
 		}
 	@FXML
-	public void  switchToConsumption(ActionEvent event) throws IOException {
+	public void  switchToPowerConsumption(ActionEvent event) throws IOException {
 	root = FXMLLoader.load(getClass().getResource("/FXML/estimateConsumption.fxml"));
 	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	scene = new Scene(root);
@@ -80,4 +80,30 @@ public class MainController {
 	stage.setScene(scene);
 	stage.show();
 		}
+	@FXML
+	public void  switchToFood(ActionEvent event) throws IOException {
+	root = FXMLLoader.load(getClass().getResource("/FXML/Food.fxml"));
+	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	scene = new Scene(root);
+	stage.setScene(scene);
+	stage.show();
+		}
+	@FXML
+	public void  switchToConsumption(ActionEvent event) throws IOException {
+	root = FXMLLoader.load(getClass().getResource("/FXML/Consumption.fxml"));
+	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	scene = new Scene(root);
+	stage.setScene(scene);
+	stage.show();
+		}
+
+	@FXML
+	public void  switchToResult(ActionEvent event) throws IOException {
+	root = FXMLLoader.load(getClass().getResource("/FXML/Result.fxml"));
+	stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	scene = new Scene(root);
+	stage.setScene(scene);
+	stage.show();
+		}
+	
 }

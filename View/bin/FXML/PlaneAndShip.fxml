@@ -9,12 +9,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #4a5a80;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <MenuButton alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="13.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="81.0" text="Menü" textFill="WHITE">
+      <MenuButton alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="81.0" text="Menü" textFill="WHITE">
          <items>
             <MenuItem mnemonicParsing="false" text="Startseite" />
          </items>
@@ -22,112 +21,104 @@
             <Font name="Candara Bold" size="15.0" />
          </font>
       </MenuButton>
-      <JFXButton fx:id="planeBackButton" buttonType="RAISED" layoutX="8.0" layoutY="558.0" onAction="#switchToRides" text="Zurück" textFill="WHITE">
+      <JFXButton fx:id="planeBackButton" buttonType="RAISED" layoutX="5.0" layoutY="570.0" onAction="#switchToRides" text="Zurück" textFill="WHITE">
          <font>
             <Font name="Candara Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="planeForwardButton" buttonType="RAISED" layoutX="929.0" layoutY="558.0" text="Weiter" textFill="WHITE">
+      <JFXButton fx:id="planeForwardButton" buttonType="RAISED" layoutX="940.0" layoutY="570.0" onAction="#switchToFood" text="Weiter" textFill="WHITE">
          <font>
             <Font name="Candara Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Pane prefHeight="600.0" prefWidth="500.0">
-         <children>
-            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="282.0" layoutY="14.0">
-               <image>
-                  <Image url="@../assets/icons8-um-die-welt-96.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="159.0" layoutY="160.0" text="Flugreisen Europa" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="109.0" layoutY="327.0" text="Flugreisen Transkontinental" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="24.0" />
-               </font>
-            </Label>
-            <TextField alignment="CENTER" layoutX="165.0" layoutY="397.0" promptText="Stunden/Jahr" />
-            <TextField alignment="CENTER" layoutX="165.0" layoutY="212.0" promptText="Stunden/Jahr" />
-            <Label layoutX="70.0" layoutY="397.0" text="Flugzeit" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="70.0" layoutY="212.0" text="Flugzeit" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="70.0" layoutY="263.0" text="Klasse" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="70.0" layoutY="451.0" text="Klasse" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </Label>
-            <JFXCheckBox layoutX="155.0" layoutY="451.0" text="Economy" textFill="WHITE" unCheckedColor="#949292">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </JFXCheckBox>
-            <JFXCheckBox layoutX="265.0" layoutY="451.0" text="Business" textFill="WHITE" unCheckedColor="#949292">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </JFXCheckBox>
-            <JFXCheckBox layoutX="155.0" layoutY="263.0" text="Economy" textFill="WHITE" unCheckedColor="#949292">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </JFXCheckBox>
-            <JFXCheckBox layoutX="265.0" layoutY="263.0" text="Business" textFill="WHITE" unCheckedColor="#949292">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </JFXCheckBox>
-         </children>
-      </Pane>
-      <Pane layoutX="500.0" prefHeight="600.0" prefWidth="500.0">
-         <children>
-            <Label layoutX="-149.0" layoutY="14.0" text="Flug&amp;Schiffsreisen" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="38.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="166.0" layoutY="14.0">
-               <image>
-                  <Image url="@../assets/icons8-kreuzfahrtschiff-96.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="159.0" layoutY="160.0" text="Seekreuzfahrt" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="159.0" layoutY="326.0" text="Flusskreuzfahrt" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="24.0" />
-               </font>
-            </Label>
-            <TextField alignment="CENTER" layoutX="219.0" layoutY="397.0" promptText="Tage/Jahr" />
-            <TextField alignment="CENTER" layoutX="219.0" layoutY="212.0" promptText="Tage/Jahr" />
-            <Label layoutX="97.0" layoutY="397.0" text="Reisedauer" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="124.0" layoutY="212.0" text="Reisedauer" textFill="WHITE">
-               <font>
-                  <Font name="Candara" size="18.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
+      <Label layoutX="159.0" layoutY="160.0" text="Flugreisen Europa" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="327.0" text="Flugreisen Transkontinental" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+      </Label>
+      <TextField alignment="CENTER" layoutX="165.0" layoutY="397.0" promptText="Stunden/Jahr" />
+      <TextField alignment="CENTER" layoutX="165.0" layoutY="212.0" promptText="Stunden/Jahr" />
+      <Label layoutX="70.0" layoutY="397.0" text="Flugzeit" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="212.0" text="Flugzeit" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="263.0" text="Klasse" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="451.0" text="Klasse" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <JFXCheckBox layoutX="155.0" layoutY="451.0" text="Economy" textFill="WHITE" unCheckedColor="#949292">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox layoutX="265.0" layoutY="451.0" text="Business" textFill="WHITE" unCheckedColor="#949292">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox layoutX="155.0" layoutY="263.0" text="Economy" textFill="WHITE" unCheckedColor="#949292">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox layoutX="265.0" layoutY="263.0" text="Business" textFill="WHITE" unCheckedColor="#949292">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <Label layoutX="351.0" layoutY="14.0" text="Flug&amp;Schiffsreisen" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="659.0" layoutY="160.0" text="Seekreuzfahrt" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="659.0" layoutY="326.0" text="Flusskreuzfahrt" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="24.0" />
+         </font>
+      </Label>
+      <TextField alignment="CENTER" layoutX="719.0" layoutY="397.0" promptText="Tage/Jahr" />
+      <TextField alignment="CENTER" layoutX="719.0" layoutY="212.0" promptText="Tage/Jahr" />
+      <Label layoutX="597.0" layoutY="397.0" text="Reisedauer" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="624.0" layoutY="212.0" text="Reisedauer" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="282.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-um-die-welt-96.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="659.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/icons8-kreuzfahrtschiff-96.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

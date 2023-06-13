@@ -16,7 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #4a5a80;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <MenuButton alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="18.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="81.0" text="Menü" textFill="WHITE">
+      <MenuButton alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="81.0" text="Menü" textFill="WHITE">
         <items>
           <MenuItem mnemonicParsing="false" text="Startseite" />
         </items>
@@ -24,17 +24,17 @@
             <Font name="Candara Bold" size="15.0" />
          </font>
       </MenuButton>
-      <Label layoutX="440.0" layoutY="25.0" text="Wohnen" textFill="WHITE">
+      <Label layoutX="440.0" layoutY="20.0" text="Wohnen" textFill="WHITE">
          <font>
             <Font name="Candara" size="38.0" />
          </font>
       </Label>
-      <JFXButton fx:id="housingForwardButton" buttonType="RAISED" layoutX="930.0" layoutY="559.0" onAction="#switchToHeating" text="Weiter" textFill="WHITE">
+      <JFXButton fx:id="housingForwardButton" buttonType="RAISED" layoutX="940.0" layoutY="570.0" onAction="#switchToHeating" text="Weiter" textFill="WHITE">
          <font>
             <Font name="Candara Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="housingBackButton" buttonType="RAISED" layoutX="12.0" layoutY="556.0" onAction="#switchToStart" text="Zurück" textFill="WHITE">
+      <JFXButton fx:id="housingBackButton" buttonType="RAISED" layoutX="5.0" layoutY="570.0" onAction="#switchToStart" text="Zurück" textFill="WHITE">
          <font>
             <Font name="Candara Bold" size="15.0" />
          </font>
@@ -69,7 +69,7 @@
          <font>
             <Font name="Candara" size="20.0" />
          </font></Label>
-      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="363.0" layoutY="16.0">
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="371.0" layoutY="2.0">
          <image>
             <Image url="@../assets/icons8-haus-96.png" />
          </image>
