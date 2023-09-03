@@ -1,6 +1,16 @@
 package Datenbank;
+import java.sql.Connection;
+
+/**
+ * Diese Klasse erhaelt die Daten aus der Tabelle Verkehrsmittel
+ * @author R. Gizem Yaylar
+ */
 
 public class Verkehrsmittel {
+	
+	Connection con; //Ruft die bereit Datenverbindung auf
+	
+	//Erstellt Variablen mit demselben Namen wie die Daten in der Tabelle
 	private int verkehrsmittelID;
 	private double bahn;
 	private double bus;
@@ -18,27 +28,28 @@ public class Verkehrsmittel {
 		this.flugzeugKurzstrecke = flugzeugKurzstrecke; 
 	}
 	
-		public int getVerkehrsmittelID() {
-			return verkehrsmittelID;
-		}
+	//Die get-Methode gibt den Variablenwert zur Verwendung zurück
+	public int getVerkehrsmittelID() {
+		return verkehrsmittelID;
+	}
 		
-		public double getBahn() {
-			return bahn;
-		}
+	public double getBahn() {
+		return bahn;
+	}
 		
-		public double getBus() {
-			return  bus;
-		}
+	public double getBus() {
+		return  bus;
+	}
 		
-		public double getTram() {
-			return tram;
-		}
+	public double getTram() {
+		return tram;
+	}
+	
+	public double getFlugzeugLangstrecke() {
+		return flugzeugLangstrecke;
+	}
 		
-		public double getFlugzeugLangstrecke() {
-			return flugzeugLangstrecke;
-		}
-		
-		public double getFlugzeugKurzstrecke() {
-			return flugzeugKurzstrecke;
-		}
+	public double getFlugzeugKurzstrecke() {
+		return flugzeugKurzstrecke;
+	}
 }

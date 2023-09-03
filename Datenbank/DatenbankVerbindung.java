@@ -2,22 +2,39 @@ package Datenbank;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
+/**
+ * Diese Klasse sorgt fuer die Verbindung mit der Datenbank.
+ * @author R. Gizem Yaylar
+ */
 public class DatenbankVerbindung {
 	
-	public static void main(String[] args) {
-	String url = "http://localhost/phpmyadmin/index.php?route=/database/structure&db=co2emissionen";
-    String user = "root@localhost";
-    String pass = "";
+	private boolean update;
+    private String query;
+    private int tabelleId;
 
-    	try {
-    		Connection con = DriverManager.getConnection(url, user, pass);
-    		System.out.println("Verbindung erfolgreich hergestellt");
+    private static Connection connection; 
+ 
+    public static Connection connect() {
 
-    	} catch (SQLException e) {
-    		System.out.println(e.getMessage());
-    	}
-	}
+        //Datenbank Logindaten
+        String url="jdbc:mysql://localhost:3306/co2emmissionen";
+        String username="root@localhost";
+        String password="";
+        try {
+
+            //Installiert den Datenbanktreiber
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, username, password);
+            Statement statement = con.createStatement();
+            System.out.println("Verbindung Erfolgreich.");
+
+        }
+        //Fehlermeldung beir der Verbindung
+        catch (Exception e) {
+            System.out.println(e);
+            System.out.println("Verbindung fehlgeschlagen."); 
+        }
+      return connect;
+    }
 }

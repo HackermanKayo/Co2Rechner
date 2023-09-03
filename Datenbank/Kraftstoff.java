@@ -1,6 +1,16 @@
 package Datenbank;
+import java.sql.Connection;
+
+/**
+ * Diese Klasse erhaelt die Daten aus der Tabelle Kraftstoff
+ * @author R. Gizem Yaylar
+ */
 
 public class Kraftstoff {
+	
+	Connection con; //Ruft die bereit Datenverbindung auf
+	
+	//Erstellt Variablen mit demselben Namen wie die Daten in der Tabelle
 	private int kraftstoffID;
 	private double benzin;
 	private double diesel;
@@ -16,6 +26,7 @@ public class Kraftstoff {
 		this.strom = strom;
 	}
 	
+	//Die get-Methode gibt den Variablenwert zur Verwendung zurueck
 	public int getKraftstoffID() {
 		return kraftstoffID;
 	}

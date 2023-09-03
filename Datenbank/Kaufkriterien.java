@@ -1,19 +1,30 @@
 package Datenbank;
+import java.sql.Connection;
+
+/**
+ * Diese Klasse erhaelt die Daten aus der Tabelle Kaufkriterien
+ * @author R. Gizem Yaylar
+ */
 
 public class Kaufkriterien {
+	
+	Connection con; //Ruft die bereit Datenverbindung auf
+	
+	//Erstellt Variablen mit demselben Namen wie die Daten in der Tabelle
 	private int kaufkriterienID;
 	private double langlebig;
 	private double funtionalitaet;
-	private double günstig;
+	private double guenstig;
 	
-	public Kaufkriterien(int kaufkriterienID, double langlebig, double funtionalitaet, double günstig) {
+	public Kaufkriterien(int kaufkriterienID, double langlebig, double funtionalitaet, double guenstig) {
 		super();
 		this.kaufkriterienID = kaufkriterienID;
 		this.langlebig = langlebig;
 		this.funtionalitaet = funtionalitaet;
-		this.günstig = günstig;
+		this.guenstig = guenstig;
 	}
 	
+	//Die get-Methode gibt den Variablenwert zur Verwendung zurueck
 	public int getKaufkriterienID() {
 		return kaufkriterienID;
 	}
@@ -26,7 +37,7 @@ public class Kaufkriterien {
 		return funtionalitaet;
 	}
 	
-	public double getGünstig() {
-		return günstig;
+	public double getGuenstig() {
+		return guenstig;
 	}
 }
