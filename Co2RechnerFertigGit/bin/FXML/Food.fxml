@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #4a5a80;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FoodController">
+   <children>
+      <MenuButton alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="81.0" text="Menü" textFill="WHITE">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Startseite" />
+         </items>
+         <font>
+            <Font name="Candara Bold" size="15.0" />
+         </font>
+      </MenuButton>
+      <JFXButton fx:id="foodBackButton" buttonType="RAISED" layoutX="10.0" layoutY="560.0" onAction="#switchToPlaneShip" text="Zurück" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="foodForwardButton" buttonType="RAISED" layoutX="920.0" layoutY="560.0" onAction="#switchToConsumption" text="Weiter" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="377.0" layoutY="14.0">
+         <image>
+            <Image url="@../assets/icons8-essen-80.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="442.0" layoutY="20.0" text="Ernährung" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="125.0" text="Gewicht" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="231.0" text="Tätigkeit" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="126.0" layoutY="399.0" text="Sport" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="514.0" layoutY="231.0" text="Ernährungsform" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="775.0" layoutY="231.0" text="Regionalität" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="775.0" layoutY="395.0" text="Saisonalität" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="514.0" layoutY="395.0" text="Bioprodukte" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="weight" alignment="CENTER_RIGHT" layoutX="118.0" layoutY="122.0" prefHeight="28.0" prefWidth="56.0" promptText="kg">
+         <font>
+            <Font name="Candara" size="16.0" />
+         </font>
+      </TextField>
+      <JFXRadioButton fx:id="wenigKoerperlich" layoutX="126.0" layoutY="261.0" text="Bewegungsarm" textFill="WHITE">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tgTaetigkeit" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="mediumKoerperlich" layoutX="126.0" layoutY="291.0" text="Leichte körperliche Arbeit" textFill="WHITE" toggleGroup="$tgTaetigkeit">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="vielKoerperlich" layoutX="126.0" layoutY="321.0" text="Körperlich intensive Arbeit" textFill="WHITE" toggleGroup="$tgTaetigkeit">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="keinSport" layoutX="126.0" layoutY="429.0" text="Keiner" textFill="WHITE">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tgSport" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="mediumSport" layoutX="126.0" layoutY="459.0" text="Wenig" textFill="WHITE" toggleGroup="$tgSport">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="vielSport" layoutX="126.0" layoutY="489.0" text="Viel" textFill="WHITE" toggleGroup="$tgSport">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="fleischBetont" layoutX="520.0" layoutY="261.0" text="Fleischbetont" textFill="WHITE">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tgErnaehrungsform" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="mischkost" layoutX="520.0" layoutY="286.0" text="Mischkost" textFill="WHITE" toggleGroup="$tgErnaehrungsform">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="fleischreduziert" layoutX="520.0" layoutY="311.0" text="Fleischreduziert" textFill="WHITE" toggleGroup="$tgErnaehrungsform">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="vegetarisch" layoutX="520.0" layoutY="336.0" text="Vegetarisch" textFill="WHITE" toggleGroup="$tgErnaehrungsform">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="vegan" layoutX="520.0" layoutY="361.0" text="Vegan" textFill="WHITE" toggleGroup="$tgErnaehrungsform">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="vielSaisonal" layoutX="775.0" layoutY="431.0" text="Ausschließlich" textFill="WHITE">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tgSaison" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="mediumSaisonal" layoutX="775.0" layoutY="456.0" text="Gemischt" textFill="WHITE" toggleGroup="$tgSaison">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="wenigSaisonal" layoutX="775.0" layoutY="481.0" text="Selten" textFill="WHITE" toggleGroup="$tgSaison">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="vielRegional" layoutX="775.0" layoutY="261.0" text="Ausschließlich" textFill="WHITE">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tgRegional" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="mediumRegional" layoutX="775.0" layoutY="286.0" text="Gemischt" textFill="WHITE" toggleGroup="$tgRegional">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="wenigRegional" layoutX="775.0" layoutY="311.0" text="Selten" textFill="WHITE" toggleGroup="$tgRegional">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="vielBio" layoutX="514.0" layoutY="431.0" text="Ausschließlich" textFill="WHITE">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tgBio" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="mediumBio" layoutX="514.0" layoutY="456.0" text="Gemischt" textFill="WHITE" toggleGroup="$tgBio">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="wenigBio" layoutX="514.0" layoutY="481.0" text="Selten" textFill="WHITE" toggleGroup="$tgBio">
+         <unSelectedColor>
+            <Color red="0.7105262875556946" green="0.6973684430122375" blue="0.6973684430122375" />
+         </unSelectedColor>
+         <font>
+            <Font name="Candara" size="15.0" />
+         </font>
+      </JFXRadioButton>
+   </children>
+</AnchorPane>
